@@ -2,6 +2,10 @@
 
 Aplicación web que te ayuda a analizar y obtener información nutricional de tus comidas.
 
+## Demo
+
+Se puede probar la aplicación en: [https://pulso-challege-frontend-5wdbyhexy-nicolas-projects-90290e5f.vercel.app/](https://pulso-challege-frontend-5wdbyhexy-nicolas-projects-90290e5f.vercel.app/)
+
 ## Requisitos
 
 - Node.js 18 o superior

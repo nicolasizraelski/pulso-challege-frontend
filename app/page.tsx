@@ -287,16 +287,20 @@ export default function NutritionChat() {
     try {
       const nutritionResult = await getNutritionInfo(confirmFood, confirmQuantity);
 
-      // Agregar mensaje con información nutricional
-      const nutritionMessage: Message = {
-        id: Date.now().toString(),
-        type: "system",
-        content: `Información nutricional para ${confirmQuantity} de ${confirmFood}`,
-        timestamp: new Date(),
-        nutritionData: nutritionResult,
-      };
-
-      setMessages((prev) => [...prev, nutritionMessage]);
+      // Eliminar el mensaje de confirmación y agregar el mensaje con información nutricional
+      setMessages((prev) => {
+        const filteredMessages = prev.filter((msg) => msg.type !== "confirmation");
+        return [
+          ...filteredMessages,
+          {
+            id: Date.now().toString(),
+            type: "system",
+            content: `Información nutricional para ${confirmQuantity} de ${confirmFood}`,
+            timestamp: new Date(),
+            nutritionData: nutritionResult,
+          },
+        ];
+      });
     } catch (error) {
       const errorMsg: Message = {
         id: Date.now().toString(),
@@ -317,13 +321,19 @@ export default function NutritionChat() {
     setConfirmFood("");
     setConfirmQuantity("");
 
-    const cancelMsg: Message = {
-      id: Date.now().toString(),
-      type: "system",
-      content: "Análisis cancelado. Podés enviar otra comida cuando quieras.",
-      timestamp: new Date(),
-    };
-    setMessages((prev) => [...prev, cancelMsg]);
+    // Eliminar el mensaje de confirmación y agregar el mensaje de cancelación
+    setMessages((prev) => {
+      const filteredMessages = prev.filter((msg) => msg.type !== "confirmation");
+      return [
+        ...filteredMessages,
+        {
+          id: Date.now().toString(),
+          type: "system",
+          content: "Análisis cancelado. Podés enviar otra comida cuando quieras.",
+          timestamp: new Date(),
+        },
+      ];
+    });
   };
 
   const handleSend = () => {
