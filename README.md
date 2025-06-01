@@ -4,7 +4,7 @@ Aplicación web que te ayuda a analizar y obtener información nutricional de tu
 
 ## Demo
 
-Se puede probar la aplicación en: [https://pulso-challege-frontend-5wdbyhexy-nicolas-projects-90290e5f.vercel.app/](https://pulso-challege-frontend-5wdbyhexy-nicolas-projects-90290e5f.vercel.app/)
+Se puede probar la aplicación en: [https://pulso-challege-frontend.vercel.app/](https://pulso-challege-frontend.vercel.app/)
 
 ## Requisitos
 
