@@ -466,8 +466,11 @@ export default function NutritionChat() {
     <div className={styles.container}>
       <div className={styles.chatContainer}>
         <header className={styles.header}>
-          <h1>Consulte su dieta</h1>
-          <p>Asistente nutricional personal</p>
+          <div className={styles.botAvatar}>N</div>
+          <div className={styles.headerContent}>
+            <h1>NutriBot</h1>
+            <p>Asistente nutricional personal</p>
+          </div>
         </header>
 
         <div className={styles.messagesContainer}>

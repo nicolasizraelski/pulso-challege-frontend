@@ -22,21 +22,44 @@
 .header {
   background: linear-gradient(135deg, #3b82f4 0%, #60a5fa 100%);
   color: white;
-  padding: 20px 16px 16px;
-  text-align: center;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.botAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  flex-shrink: 0;
+  backdrop-filter: blur(4px);
+}
+
+.headerContent {
+  flex: 1;
 }
 
 .header h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
+  color: white;
 }
 
 .header p {
-  margin: 4px 0 0;
-  font-size: 14px;
-  opacity: 0.9;
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .messagesContainer {
